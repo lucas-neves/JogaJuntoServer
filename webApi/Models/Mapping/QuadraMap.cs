@@ -12,18 +12,22 @@ namespace webApi.Models.Mapping
 
             // Properties
             this.Property(t => t.Id_Quadra)
+            	.IsRequired()
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
 
             this.Property(t => t.CoordernateOne)
+           		.IsRequired()
                 .HasMaxLength(30);
 
             this.Property(t => t.CoordernateTwo)
+            	.IsRequired()
                 .HasMaxLength(30);
 
             this.Property(t => t.Opcionais)
                 .HasMaxLength(100);
 
             this.Property(t => t.Tipo_Quadra)
+            	.IsRequired()
                 .HasMaxLength(100);
 
             // Table & Column Mappings
@@ -37,12 +41,12 @@ namespace webApi.Models.Mapping
             this.Property(t => t.Tipo_Quadra).HasColumnName("Tipo_Quadra");
 
             // Relationships
-            this.HasRequired(t => t.Dono)
-                .WithMany(t => t.Quadras)
-                .HasForeignKey(d => d.Id_Dono);
-            this.HasRequired(t => t.Endereco)
-                .WithMany(t => t.Quadras)
-                .HasForeignKey(d => d.Id_End);
+            //this.HasRequired(t => t.Dono)
+            //    .WithMany(t => t.Quadras)
+            //    .HasForeignKey(d => d.Id_Dono);
+            //this.HasRequired(t => t.Endereco)
+            //    .WithMany(t => t.Quadras)
+            //    .HasForeignKey(d => d.Id_End);
 
         }
     }
