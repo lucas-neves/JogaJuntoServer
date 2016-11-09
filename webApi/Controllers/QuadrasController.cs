@@ -24,7 +24,9 @@ namespace webApi.Controllers
         }
 
         // GET: api/Quadras/5
+        [HttpGet]
         [ResponseType(typeof(Quadra))]
+        [Route("api/Quadras/{Id_Quadra}")]
         public async Task<IHttpActionResult> GetQuadra(int id)
         {
             Quadra quadra = await db.Quadras.FindAsync(id);
