@@ -21,7 +21,7 @@ namespace webApi.Models
         public DbSet<Conta> Contas { get; set; }
         public DbSet<Dono> Donoes { get; set; }
         public DbSet<Endereco> Enderecoes { get; set; }
-        public DbSet<Favorito> Favoritos { get; set; }
+        public DbSet<Favorito> Favoritoes { get; set; }
         public DbSet<Quadra> Quadras { get; set; }
         public DbSet<database_firewall_rules> database_firewall_rules { get; set; }
 
