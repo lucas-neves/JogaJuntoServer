@@ -27,7 +27,7 @@ namespace webApi.Controllers
         [ResponseType(typeof(Favorito))]
         public async Task<IHttpActionResult> GetFavorito(int id)
         {
-            Favorito favorito = await db.Favoritoes.FindAsync(id)
+            Favorito favorito = await db.Favoritoes.FindAsync(id);
             if (favorito == null)
             {
                 return NotFound();
